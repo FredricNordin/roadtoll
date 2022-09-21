@@ -72,18 +72,9 @@ public class TollFeeCalculator {
 			return 0;
 		}
     }
-    
-    public int test(int a, int b) {
-    	return 1 + 2;
-    }
-    
 
-    public static boolean isTollFreeDate(LocalDateTime date) {
-    	if(date.getDayOfWeek().getValue() == 6 || date.getDayOfWeek().getValue() == 7 || date.getMonth().getValue() == 7) {
-            return true;
-        } else {
-        	return false;
-        }
+    public static boolean isTollFreeDate(LocalDateTime dates) {
+    	return dates.getDayOfWeek().getValue() == 6 || dates.getDayOfWeek().getValue() == 7 || dates.getMonth().getValue() == 7;
     }
 
     public static void main(String[] args) {
