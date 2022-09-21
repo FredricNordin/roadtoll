@@ -62,7 +62,7 @@ public class TollFeeCalculator {
 			return 8;
 		} if (hour == 15 && minute >= 0 && hour == 15 && minute <= 29) {
 			return 13;
-		} if (hour >= 15 && minute >= 30 && hour <= 16 && minute <= 59) {
+		} if (hour <= 16 && minute >= 00 && hour >= 15 && minute >= 0) {
 			return 18;
 		} if (hour == 17 && minute >= 0 && hour == 17 && minute <= 59) {
 			return 13;
