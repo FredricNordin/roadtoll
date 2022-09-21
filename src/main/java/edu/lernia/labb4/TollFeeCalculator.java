@@ -32,16 +32,16 @@ public class TollFeeCalculator {
             long diffInMinutes = intervalStart.until(date, ChronoUnit.MINUTES);
 
             if(diffInMinutes > 60) {
-                totalFee += getTollFeePerPassing(intervalStart, date);
+                totalFee += getTollFeePerPassing(date);
                 intervalStart = date;
             }
         }
-        totalFee += getTollFeePerPassing(intervalStart, dates[dates.length - 1]);
+        totalFee += getTollFeePerPassing(intervalStart);
         return Math.min(totalFee, 60);
     }
 
     
-    public static int getTollFeePerPassing(LocalDateTime dates, LocalDateTime date) {
+    public static int getTollFeePerPassing(LocalDateTime dates) {
 		int hour = dates.getHour();
 		int minute = dates.getMinute();
 		
