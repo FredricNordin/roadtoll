@@ -30,70 +30,70 @@ class Tests {
 		assertTrue(TollFeeCalculator.isTollFreeDate(date));
 	}
 	
-	@Test /* Test if a time between 06:00 - 06:29. Expect cost of 8:- */
+	@Test /* Test a time between 06:00 - 06:29. Expect cost of 8:- */
 	void testGetTollFeePerPassing1() {
 		String testWithDate[] = {"2020-06-08 06:15"};
 		LocalDateTime date = LocalDateTime.parse(testWithDate[0], DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm"));
 		assertEquals(8, TollFeeCalculator.getTollFeePerPassing(date, date));
 	}
 	
-	@Test /* Test if a time between 06:30 - 06:59. Expect cost of 13:- */
+	@Test /* Test a time between 06:30 - 06:59. Expect cost of 13:- */
 	void testGetTollFeePerPassing2() {
 		String testWithDate[] = {"2020-06-08 06:40"};
 		LocalDateTime date = LocalDateTime.parse(testWithDate[0], DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm"));
 		assertEquals(13, TollFeeCalculator.getTollFeePerPassing(date, date));
 	}
 	
-	@Test /* Test if a time between 07:00 - 07:59. Expect cost of 18:- */
+	@Test /* Test a time between 07:00 - 07:59. Expect cost of 18:- */
 	void testGetTollFeePerPassing3() {
 		String testWithDate[] = {"2020-06-08 07:30"};
 		LocalDateTime date = LocalDateTime.parse(testWithDate[0], DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm"));
 		assertEquals(18, TollFeeCalculator.getTollFeePerPassing(date, date));
 	}
 	
-	@Test /* Test if a time between 08:00 - 08:29. Expect cost of 13:- */
+	@Test /* Test a time between 08:00 - 08:29. Expect cost of 13:- */
 	void testGetTollFeePerPassing4() {
 		String testWithDate[] = {"2020-06-08 08:05"};
 		LocalDateTime date = LocalDateTime.parse(testWithDate[0], DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm"));
 		assertEquals(13, TollFeeCalculator.getTollFeePerPassing(date, date));
 	}
 	
-	@Test /* Test if a time between 08:30 - 14:59. Expect cost of 8:- */
+	@Test /* Test a time between 08:30 - 14:59. Expect cost of 8:- */
 	void testGetTollFeePerPassing5() {
 		String testWithDate[] = {"2020-06-08 08:30"};
 		LocalDateTime date = LocalDateTime.parse(testWithDate[0], DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm"));
 		assertEquals(8, TollFeeCalculator.getTollFeePerPassing(date, date));
 	}
 	
-	@Test /* Test if a time between 15:00 - 15:29. Expect cost of 13:- */
+	@Test /* Test a time between 15:00 - 15:29. Expect cost of 13:- */
 	void testGetTollFeePerPassing6() {
 		String testWithDate[] = {"2020-06-08 15:10"};
 		LocalDateTime date = LocalDateTime.parse(testWithDate[0], DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm"));
 		assertEquals(13, TollFeeCalculator.getTollFeePerPassing(date, date));
 	}
 	
-	@Test /* Test if a time between 15:30 - 16:59. Expect cost of 18:- */
+	@Test /* Test a time between 15:30 - 16:59. Expect cost of 18:- */
 	void testGetTollFeePerPassing7() {
 		String testWithDate[] = {"2020-06-08 16:00"};
 		LocalDateTime date = LocalDateTime.parse(testWithDate[0], DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm"));
 		assertEquals(18, TollFeeCalculator.getTollFeePerPassing(date, date));
 	}
 	
-	@Test /* Test if a time between 17:00 - 17:59. Expect cost of 13:- */
+	@Test /* Test a time between 17:00 - 17:59. Expect cost of 13:- */
 	void testGetTollFeePerPassing8() {
 		String testWithDate[] = {"2020-06-08 17:01"};
 		LocalDateTime date = LocalDateTime.parse(testWithDate[0], DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm"));
 		assertEquals(13, TollFeeCalculator.getTollFeePerPassing(date, date));
 	}
 	
-	@Test /* Test if a time between 18:00 - 18:29. Expect cost of 8:- */
+	@Test /* Test a time between 18:00 - 18:29. Expect cost of 8:- */
 	void testGetTollFeePerPassing9() {
 		String testWithDate[] = {"2020-06-08 18:28"};
 		LocalDateTime date = LocalDateTime.parse(testWithDate[0], DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm"));
 		assertEquals(8, TollFeeCalculator.getTollFeePerPassing(date, date));
 	}
 	
-	@Test /* Test if a time between 18:30 - 05:59. Expect cost of 0:- */
+	@Test /* Test a time between 18:30 - 05:59. Expect cost of 0:- */
 	void testGetTollFeePerPassing10() {
 		String testWithDate[] = {"2020-06-08 03:30"};
 		LocalDateTime date = LocalDateTime.parse(testWithDate[0], DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm"));
