@@ -22,6 +22,13 @@ class Tests {
 		assertTrue(TollFeeCalculator.isTollFreeDate(date));
 	}
 	
+	@Test /* Test if a date IS a toll-free date. Test with Sunday. */
+	void testTollFreeDateWeekend2() {
+		String testWithDate[] = {"2020-06-28 10:00"};
+		LocalDateTime date = LocalDateTime.parse(testWithDate[0], DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm"));
+		assertTrue(TollFeeCalculator.isTollFreeDate(date));
+	}
+	
 	@Test /* Test if a date IS a toll-free date. Test with Wednesday in July. */
 	void testTollFreeDateJuly() {
 		String testWithDate[] = {"2020-07-08 10:00"};
