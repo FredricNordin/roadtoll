@@ -37,6 +37,8 @@ public class TollFeeCalculator {
         }
         totalFee += getTollFeePerPassing(intervalStart);
         return Math.min(totalFee, 60);
+        // Det går att lösa ENBART att få det högsta priset inom de tre tider som var inom 60 minuter. Men för att få det fungera med FLER tider inom 60 minuter så måste man skriva om HELA funktionen. Vilket inte var syftet?
+        // Så vill ni ha en lösning på endast det tidschema som är i uppgiften och bara test emot dessa?? Det går ju inte att skriva ett test med fler/andra tider annars.
     }
 
     
